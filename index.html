@@ -20,8 +20,16 @@
         var game = new SandGame.Game();
         new SandGame.GameView(game, ctx).start();
 
-        canvasEl.onclick = function(event){
-          game.makeParticle(event.x, event.y);
+        canvasEl.onmousedown = function(event){
+          game.makeParticles();
+        };
+
+        canvasEl.onmousemove = function(event){
+          game.moveMouse(event.x, event.y);
+        };
+
+        canvasEl.onmouseup = function(event){
+          game.stopParticles();
         };
       })();
     </script>

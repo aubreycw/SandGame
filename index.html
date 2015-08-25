@@ -10,6 +10,7 @@
 
       <p>Press "t" for solid on and off</p>
       <p>Press "w" for water on and off</p>
+      <p>Press "c" for cloud on and off</p>
       <p>Press "d" for delete on and off</p>
 
       <p>p to save</p>
@@ -25,6 +26,7 @@
     <script type="application/javascript" src="lib/sandParticle.js"></script>
     <script type="application/javascript" src="lib/solidParticle.js"></script>
     <script type="application/javascript" src="lib/waterParticle.js"></script>
+    <script type="application/javascript" src="lib/cloudParticle.js"></script>
     
 
     <script type="application/javascript">
@@ -54,6 +56,8 @@
             game.toggleSolid();
           } else if (String.fromCharCode(event.charCode) === "w"){
             game.toggleWater();
+          } else if (String.fromCharCode(event.charCode) === "c"){
+            game.toggleCloud();
           } else if (String.fromCharCode(event.charCode) === "d"){
             game.toggleDelete();
           } else if (String.fromCharCode(event.charCode) === "p"){

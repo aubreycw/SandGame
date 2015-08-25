@@ -8,7 +8,7 @@
     <canvas></canvas>
     <div>
 
-      <p>Press "t" for solid on and off</p>
+      <p>Press "r" for stone/rock on and off</p>
       <p>Press "w" for water on and off</p>
       <p>Press "c" for cloud on and off</p>
       <p>Press "e" for dirt/earth on and off</p>
@@ -28,7 +28,7 @@
     <script type="application/javascript" src="lib/movingParticle.js"></script>
     <script type="application/javascript" src="lib/sandParticle.js"></script>
     <script type="application/javascript" src="lib/dirtParticle.js"></script>
-    <script type="application/javascript" src="lib/solidParticle.js"></script>
+    <script type="application/javascript" src="lib/stoneParticle.js"></script>
     <script type="application/javascript" src="lib/waterParticle.js"></script>
     <script type="application/javascript" src="lib/cloudParticle.js"></script>
     
@@ -56,8 +56,8 @@
         };
 
         this.onkeypress = function(event){
-          if (String.fromCharCode(event.charCode) === "t"){
-            game.toggleMode("solid");
+          if (String.fromCharCode(event.charCode) === "r"){
+            game.toggleMode("stone");
           } else if (String.fromCharCode(event.charCode) === "w"){
             game.toggleMode("water");
           } else if (String.fromCharCode(event.charCode) === "c"){

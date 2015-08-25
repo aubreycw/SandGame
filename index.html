@@ -9,6 +9,7 @@
     <script type="application/javascript" src="lib/game.js"></script>
     <script type="application/javascript" src="lib/gameView.js"></script>
     <script type="application/javascript" src="lib/sandParticle.js"></script>
+    <script type="application/javascript" src="lib/solidParticle.js"></script>
 
     <script type="application/javascript">
       (function () {
@@ -21,7 +22,7 @@
         new SandGame.GameView(game, ctx).start();
 
         canvasEl.onmousedown = function(event){
-          game.makeParticles();
+          game.mouseDown();
         };
 
         canvasEl.onmousemove = function(event){
@@ -29,8 +30,15 @@
         };
 
         canvasEl.onmouseup = function(event){
-          game.stopParticles();
+          game.mouseUp();
         };
+
+        this.onkeypress = function(event){
+          if (String.fromCharCode(event.charCode) === "t"){
+            console.log("hi")
+            game.toggleSolid();
+          }
+        }
       })();
     </script>
   </body>

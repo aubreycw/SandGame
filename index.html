@@ -12,6 +12,7 @@
       <p>Press "w" for water on and off</p>
       <p>Press "c" for cloud on and off</p>
       <p>Press "e" for dirt/earth on and off</p>
+      <p>Press "s" for sand on and off</p>
 
       <p>Press "d" for delete on and off</p>
 
@@ -63,6 +64,8 @@
             game.toggleMode("cloud");
           } else if (String.fromCharCode(event.charCode) === "e"){
             game.toggleMode("dirt");
+          } else if (String.fromCharCode(event.charCode) === "s"){
+            game.toggleMode("sand");
           } else if (String.fromCharCode(event.charCode) === "d"){
             game.toggleMode("deletePen");
           } else if (String.fromCharCode(event.charCode) === "p"){

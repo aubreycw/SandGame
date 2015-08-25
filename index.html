@@ -13,6 +13,7 @@
       <p>Press "c" for cloud on and off</p>
       <p>Press "e" for dirt/earth on and off</p>
       <p>Press "s" for sand on and off</p>
+      <p>Press "f" for seed (flower) on and off</p>
 
       <p>Press "d" for delete on and off</p>
 
@@ -30,6 +31,8 @@
     <script type="application/javascript" src="lib/dirtParticle.js"></script>
     <script type="application/javascript" src="lib/stoneParticle.js"></script>
     <script type="application/javascript" src="lib/waterParticle.js"></script>
+    <script type="application/javascript" src="lib/seedParticle.js"></script>
+    <script type="application/javascript" src="lib/Flower.js"></script>
     <script type="application/javascript" src="lib/cloudParticle.js"></script>
     
 
@@ -64,6 +67,8 @@
             game.toggleMode("cloud");
           } else if (String.fromCharCode(event.charCode) === "e"){
             game.toggleMode("dirt");
+          } else if (String.fromCharCode(event.charCode) === "f"){
+            game.toggleMode("seed");
           } else if (String.fromCharCode(event.charCode) === "s"){
             game.toggleMode("sand");
           } else if (String.fromCharCode(event.charCode) === "d"){

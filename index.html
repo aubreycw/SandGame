@@ -9,6 +9,7 @@
     <div>
       <p>Press "t" for solid on and off</p>
       <p>Press "w" for water on and off</p>
+      <p>Press "d" for delete on and off</p>
     </div>
     
 
@@ -48,6 +49,8 @@
             game.toggleSolid();
           } else if (String.fromCharCode(event.charCode) === "w"){
             game.toggleWater();
+          } else if (String.fromCharCode(event.charCode) === "d"){
+            game.toggleDelete();
           }
         }
       })();

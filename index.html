@@ -6,12 +6,20 @@
   <body>
 
     <canvas></canvas>
-    <p>Press "t" to turn solid on and off</p>
+    <div>
+      <p>Press "t" for solid on and off</p>
+      <p>Press "w" for water on and off</p>
+    </div>
+    
 
     <script type="application/javascript" src="lib/game.js"></script>
     <script type="application/javascript" src="lib/gameView.js"></script>
+    <script type="application/javascript" src="lib/util.js"></script>
+    <script type="application/javascript" src="lib/movingParticle.js"></script>
     <script type="application/javascript" src="lib/sandParticle.js"></script>
     <script type="application/javascript" src="lib/solidParticle.js"></script>
+    <script type="application/javascript" src="lib/waterParticle.js"></script>
+    
 
     <script type="application/javascript">
       (function () {
@@ -37,8 +45,9 @@
 
         this.onkeypress = function(event){
           if (String.fromCharCode(event.charCode) === "t"){
-            console.log("hi")
             game.toggleSolid();
+          } else if (String.fromCharCode(event.charCode) === "w"){
+            game.toggleWater();
           }
         }
       })();

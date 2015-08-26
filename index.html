@@ -52,7 +52,10 @@
         };
 
         canvasEl.onmousemove = function(event){
-          game.moveMouse(event.x, event.y);
+          // ctx;
+          // canvasEl;
+          // debugger;
+          game.moveMouse(event.offsetX, event.offsetY);
         };
 
         canvasEl.onmouseup = function(event){

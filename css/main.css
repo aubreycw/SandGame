@@ -18,6 +18,15 @@ div.sidebar {
   width: 200;
 }
 
-div p {
-  font-family: Arial, Helvetica, sans-serif;
+button {
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #341934;
+  padding: 10px 20px 10px 20px;
+}
+
+button:hover {
+  background: #2F162F;
 }

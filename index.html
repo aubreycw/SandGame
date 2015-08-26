@@ -13,17 +13,24 @@
 
     <div class="sidebar">
 
-      <p>stone/rock (r)</p>
-      <p>water (w)</p>
-      <p>cloud (c)</p>
-      <p>dirt/earth (e)</p>
-      <p>sand (s))</p>
-      <p>seed/flower (f)</p>
+      <button class="save">save (p)</button>
+      <button class="open">open saved game (o)</button>
 
-      <p>delete (d)</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
-      <p>save (p)</p>
-      <p>open saved game (o)</p>
+      <button class="stone">stone/rock (r)</button>
+      <button class="water">water (w)</button>
+      <button class="cloud">cloud (c)</button>
+      <button class="dirt">dirt/earth (e)</button>
+      <button class="sand">sand (s))</button>
+      <button class="seed">seed/flower (f)</button>
+      <button class="delete">delete (d)</button>
 
     </div>
     
@@ -63,7 +70,38 @@
                   }            
         }
  
-        canvasEl.addEventListener("click .full_screen",fullscreen)
+        canvasEl.addEventListener("click .full_screen",fullscreen);
+        document.getElementsByClassName("stone")[0].addEventListener("click", toggleStone);
+        document.getElementsByClassName("water")[0].addEventListener("click", toggleWater);
+        document.getElementsByClassName("sand")[0].addEventListener("click", toggleSand);
+        document.getElementsByClassName("dirt")[0].addEventListener("click", toggleDirt);
+        document.getElementsByClassName("seed")[0].addEventListener("click", toggleSeed);
+        document.getElementsByClassName("cloud")[0].addEventListener("click", toggleCloud);
+
+        function toggleStone(){
+          game.toggleMode("stone");
+        };
+
+        function toggleWater(){
+          game.toggleMode("water");
+        };
+
+        function toggleSand(){
+          game.toggleMode("sand");
+        };
+
+        function toggleDirt(){
+          game.toggleMode("dirt");
+        };
+
+        function toggleSeed(){
+          game.toggleMode("seed");
+        }
+
+        function toggleCloud(){
+          game.toggleMode("cloud");
+        }
+
 
         canvasEl.onmousedown = function(event){
           game.mouseDown();

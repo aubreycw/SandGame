@@ -13,17 +13,17 @@
 
     <div class="sidebar">
 
-      <p>Press "r" for stone/rock on and off</p>
-      <p>Press "w" for water on and off</p>
-      <p>Press "c" for cloud on and off</p>
-      <p>Press "e" for dirt/earth on and off</p>
-      <p>Press "s" for sand on and off</p>
-      <p>Press "f" for seed (flower) on and off</p>
+      <p>stone/rock (r)</p>
+      <p>water (w)</p>
+      <p>cloud (c)</p>
+      <p>dirt/earth (e)</p>
+      <p>sand (s))</p>
+      <p>seed/flower (f)</p>
 
-      <p>Press "d" for delete on and off</p>
+      <p>delete (d)</p>
 
-      <p>p to save</p>
-      <p>o to open saved game</p>
+      <p>save (p)</p>
+      <p>open saved game (o)</p>
 
     </div>
     
@@ -46,7 +46,7 @@
       (function () {
         var canvasEl = document.getElementsByTagName("canvas")[0];
         SandGame.Game.DIM_X = window.innerWidth - 250;
-        SandGame.Game.DIM_Y = window.innerHeight;
+        SandGame.Game.DIM_Y = window.innerHeight + 10;
         canvasEl.width = SandGame.Game.DIM_X;
         canvasEl.height = SandGame.Game.DIM_Y;
 

@@ -5,8 +5,9 @@
 
   <body>
 
-    <canvas></canvas>
-    <div>
+    <canvas style="float: left;"></canvas>
+
+    <div style="float: left;">
 
       <p>Press "r" for stone/rock on and off</p>
       <p>Press "w" for water on and off</p>
@@ -46,6 +47,17 @@
         var ctx = canvasEl.getContext("2d");
         var game = new SandGame.Game();
         new SandGame.GameView(game, ctx).start();
+ 
+        function fullscreen(){
+                   if(canvasEl.webkitRequestFullScreen) {
+                       canvasEl.webkitRequestFullScreen();
+                   }
+                  else {
+                     canvasEl.mozRequestFullScreen();
+                  }            
+        }
+ 
+        canvasEl.addEventListener("click .full_screen",fullscreen)
 
         canvasEl.onmousedown = function(event){
           game.mouseDown();
@@ -81,6 +93,8 @@
             game.showSave();
           } else if (String.fromCharCode(event.charCode) === "o"){
             game.loadGame();
+          } else if (String.fromCharCode(event.charCode) === "l"){
+            fullscreen();
           }
         }
       })();

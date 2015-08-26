@@ -13,14 +13,11 @@
 
     <div class="sidebar">
 
+      <br>
+
       <button class="save">save (p)</button>
       <button class="open">open saved game (o)</button>
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
       <br>
       <br>
 
@@ -31,6 +28,10 @@
       <button class="sand">sand (s))</button>
       <button class="seed">seed/flower (f)</button>
       <button class="delete">delete (d)</button>
+
+      <br>
+      <br>
+      <button class="clear">clear all</button>
 
     </div>
     
@@ -76,7 +77,9 @@
         document.getElementsByClassName("sand")[0].addEventListener("click", toggleSand);
         document.getElementsByClassName("dirt")[0].addEventListener("click", toggleDirt);
         document.getElementsByClassName("seed")[0].addEventListener("click", toggleSeed);
-        document.getElementsByClassName("cloud")[0].addEventListener("click", toggleCloud);
+        document.getElementsByClassName("save")[0].addEventListener("click", saveGame);
+        document.getElementsByClassName("open")[0].addEventListener("click", openGame);
+        document.getElementsByClassName("clear")[0].addEventListener("click", clearGame);
 
         function toggleStone(){
           game.toggleMode("stone");
@@ -100,6 +103,18 @@
 
         function toggleCloud(){
           game.toggleMode("cloud");
+        }
+
+        function saveGame(){
+          game.showSave();
+        }
+
+        function openGame(){
+          game.loadGame();
+        }
+
+        function clearGame(){
+          game.clearGame();
         }
 
 

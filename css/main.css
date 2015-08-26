@@ -1,0 +1,10 @@
+canvas {
+  float: left;
+}
+
+div.sidebar {
+  float: left;
+  padding-left: 25px;
+  /*padding-right: 20px;*/
+  width: 200;
+}

@@ -1,13 +1,17 @@
 <html>
   <head>
+    <meta charset="utf-8">
+
     <title>Sand Game</title>
+
+    <link rel="stylesheet" href="css/main.css" type="text/css">
   </head>
 
   <body>
 
-    <canvas style="float: left;"></canvas>
+    <canvas></canvas>
 
-    <div style="float: left;">
+    <div class="sidebar">
 
       <p>Press "r" for stone/rock on and off</p>
       <p>Press "w" for water on and off</p>
@@ -41,6 +45,8 @@
     <script type="application/javascript">
       (function () {
         var canvasEl = document.getElementsByTagName("canvas")[0];
+        SandGame.Game.DIM_X = window.innerWidth - 250;
+        SandGame.Game.DIM_Y = window.innerHeight;
         canvasEl.width = SandGame.Game.DIM_X;
         canvasEl.height = SandGame.Game.DIM_Y;
 

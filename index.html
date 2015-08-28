@@ -31,6 +31,16 @@
       <button class="seed">seed/flower (f)</button>
       <button class="delete">delete (d)</button>
 
+      <form class="custom-sand">
+        Color (hex):<br>
+        <input type="text" name="colorHex" value="#ffffff">
+        <br>
+        Density:<br>
+        <input type="integer" name="density" value="1">
+        <br>
+        <input type="submit" value="Use custom sand">
+      </form>
+
       <br>
       <br>
       <button class="clear">clear all</button>
@@ -55,6 +65,7 @@
     <script type="application/javascript" src="lib/stoneParticle.js"></script>
     <script type="application/javascript" src="lib/waterParticle.js"></script>
     <script type="application/javascript" src="lib/seedParticle.js"></script>
+    <script type="application/javascript" src="lib/customParticle.js"></script>
     <script type="application/javascript" src="lib/flower.js"></script>
     <script type="application/javascript" src="lib/stalk.js"></script>
     <script type="application/javascript" src="lib/seedData.js"></script>
@@ -94,6 +105,8 @@
         document.getElementsByClassName("save")[0].addEventListener("click", saveGame);
         document.getElementsByClassName("open")[0].addEventListener("click", openGame);
         document.getElementsByClassName("clear")[0].addEventListener("click", clearGame);
+
+        // document.getElementsByClassName("custom-sand")[0].addEventListener("submit", makeCustom);
 
         function toggleStone(){
           game.toggleMode("stone");
@@ -138,6 +151,11 @@
         function clearGame(){
           game.clearGame();
         }
+
+        // function makeCustom(event){
+        //   event.preventDefault();
+        //   debugger;
+        // }
 
 
         canvasEl.onmousedown = function(event){
